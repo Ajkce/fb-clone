@@ -1,0 +1,15 @@
+.storyreel{
+    flex: 1;
+    justify-content: center;
+    display: flex;
+    
+   
+}
+
+.posts{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}

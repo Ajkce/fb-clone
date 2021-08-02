@@ -1,0 +1,79 @@
+.messagesender{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    box-shadow: 0px 5px 7px -7px rgba(0, 0, 0, 0.75);
+    width: 100%;
+    margin: 5px 0;
+    border-radius: 10px;
+
+
+}
+.messagesender_top form{
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+}
+.message_input{
+    flex: 1;
+}
+
+.messagesender_top{
+    display: flex;
+ 
+    align-items: center;
+    margin: 10px 20px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #d4d6d8;
+
+}
+.messagesender_top input{
+    outline-width: 0;
+    padding: 10px 20px;
+    border: none;
+     background-color: #eff2f5;
+    border-radius: 999px;
+    margin: 0px 10px;
+
+}
+.messagesender_top button{
+    display: none;
+}
+.messagesender_bottom{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px 20px 5px 20px;
+
+}
+
+.messagesender_bottom div{
+    display: flex;
+    align-items: center;
+    
+    padding: 10px 25px;
+}
+.messagesender_bottom div:hover{
+    background-color: rgb(235, 229, 229);
+    cursor: pointer;
+}
+.messagesender_bottom h4{
+    margin-left: 10px;
+    font-weight: 450;
+    color: grey;
+    font-size: 16px;
+}
+
+.live_video .MuiSvgIcon-root{
+    color: red;
+    font-size: 25px;
+}
+.photo .MuiSvgIcon-root{
+    color: green;
+
+}
+
+.feeling .MuiSvgIcon-root{
+    color: rgb(255, 166, 0);
+    font-size: 25px;
+}
