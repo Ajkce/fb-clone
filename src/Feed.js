@@ -4,9 +4,12 @@ import Story from './Story'
 import Messagesender from './Messagesender';
 import Post from './Post';
 import Widgets from './widget'
+import {UseGlobalContext} from './context'
 
 
 function feed() {
+    const { userinfo } = UseGlobalContext();
+    const {displayName, photoURL} = userinfo;
     return (
         <div className='feed'>
             {/* Story Reel */}
@@ -32,8 +35,8 @@ function feed() {
             <Messagesender/>
             <div className='posts'>
             <Post
-            profilepic='https://images.pexels.com/photos/775358/pexels-photo-775358.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
-             image='https://images.pexels.com/photos/4218662/pexels-photo-4218662.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
+            profilepic={photoURL}
+                   image='https://images.pexels.com/photos/4218662/pexels-photo-4218662.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
               username='Ajaya'
                timestamp='1 hr ' 
                message='Whats Up Guyz i am currently very tired'
@@ -41,8 +44,8 @@ function feed() {
 
             
                 <Post
-                 profilepic='https://images.pexels.com/photos/775358/pexels-photo-775358.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
-             image='https://images.pexels.com/photos/1954524/pexels-photo-1954524.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
+                 profilepic={photoURL}
+                              image='https://images.pexels.com/photos/1954524/pexels-photo-1954524.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
               username='Ajaya'
                timestamp='1 hr ' 
                message='Whats Up Guyz i am currently very tired'

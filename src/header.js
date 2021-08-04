@@ -15,9 +15,11 @@ import NotificationsActiveIcon
 from '@material-ui/icons/NotificationsActive';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import { Forum } from '@material-ui/icons';
+import {UseGlobalContext}  from './context';
 
 function header() {
-    
+    const { userinfo } = UseGlobalContext();
+    const {displayName, photoURL} = userinfo;
     return (
         <div className='header'>
             <div className='header_left'>
@@ -47,8 +49,8 @@ function header() {
             <div className='header_right'>
                 <div className='header_info'>
 
-                    <Avatar/>
-                    <h4>Aj Kce</h4>
+                    <Avatar src={photoURL} />
+                    <h4>{displayName}</h4>
                 </div>
                 <IconButton>
                     <AddIcon/>

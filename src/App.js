@@ -5,14 +5,16 @@ import Sidebar from './sidebar'
 import Feed from './Feed'
 import Widget from './widget'
 import Login from './Login'
-import Fuck from './Fuck'
+import { UseGlobalContext } from './context';
+
 
 
 function App() {
-   const user = '';
+  const { userinfo} = UseGlobalContext();
+  console.log(userinfo);
   return (
   <div  className='app'>
-    { !user ? <Fuck/> : <>
+    { !userinfo ? <Login/> : <>
     <Header />
 
     <div className="app_body">

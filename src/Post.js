@@ -9,6 +9,7 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
 
 function Post({profilepic, image, username, timestamp, message}) {
+     
     return (
         <div className='post'>
             <div className='post_top'>

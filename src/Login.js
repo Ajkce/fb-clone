@@ -1,33 +1,27 @@
 import React, {useState} from 'react'
 import './login.css'
 import {auth, provider } from './firebase';
-
-
-
-
-
-
-
+import { UseGlobalContext } from './context';
 
 
 
 
 const Login = () => {
+    const {loggedUser} = UseGlobalContext();
 
-    const [email, setEmail] = useState('');
-const [password, setPassword] = useState('');
-const [userdetails, setUserdetails] = useState([]);
-
-function handleSubmit(e) {
+ 
+ function handleSubmit(e) {
     e.preventDefault();
     auth.signInWithPopup(provider)
     .then(result => {
        const user = result.user;
       const { displayName, photoURL} = user;
-      setUserdetails({displayName, photoURL});
+      loggedUser({displayName, photoURL})
       
     })
     .catch((error) => alert(error.message))
+
+   
     
 }
     
@@ -41,15 +35,11 @@ function handleSubmit(e) {
             <div className='box'>
                 <form>
 
-                <input value={email}
-                onClick = {(e) => setEmail(e.target.value)}
-                placeholder='Email adress or phone number'></input>
+                <input  placeholder='Email adress or phone number'></input>
 
                 
 
                 <input 
-                value={password}
-                onClick = {(e) => setPassword( e.target.value)}
                 placeholder='Password'></input>
                 
 
